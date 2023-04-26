@@ -95,7 +95,7 @@ Y value Y0
   maze#lins 0 ?do 
     I 1+ 3 .r ." : " 
     maze#cols 1+ I * maze + 1+ maze c@ type cr 
-  loop  cr 200 ms ; 
+  loop cr 200 ms ;
 ( ------------------------------------- )
 : freedom?     X maze#cols =   Y maze#lins =   or ;
 : back2start?  X X0 =   Y Y0 =  and  #step 1 > and ;
