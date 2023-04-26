@@ -90,12 +90,12 @@ Y value Y0
 : #step+1 #step 1+ to #step ;
 ( ------------------------------------- )
 : printSTATE 
-  cr
+  page cr
   ." step: " #step . cr
   maze#lins 0 ?do 
     I 1+ 3 .r ." : " 
     maze#cols 1+ I * maze + 1+ maze c@ type cr 
-  loop  cr ; 
+  loop  cr 200 ms ; 
 ( ------------------------------------- )
 : freedom?     X maze#cols =   Y maze#lins =   or ;
 : back2start?  X X0 =   Y Y0 =  and  #step 1 > and ;
